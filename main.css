@@ -14,8 +14,7 @@ html {
     transition: 0.2s;
 }
 
-/* --- HEADER --- */
-
+/* --- GAME TITLE AND RULES --- */
 
 /* .header {
 } */
@@ -38,47 +37,40 @@ html {
     padding: 40px;
 }
 
-.game-desc__points::before {
+.game-desc__points::before,
+.game-desc__slowness::before,
+.game-desc__ghost::before,
+.game-desc__border::before {
     position: absolute;
-    background-image: url('img/point.svg');
-    box-shadow: 0px 0px 30px 1px #00ff66;
     width: 30px;
     height: 30px;
     margin-left: -35px;
     content: "";
+}
+
+.game-desc__points::before {
+    background-image: url('img/point.svg');
+    box-shadow: 0px 0px 30px 1px #00ff66;
 }
 
 .game-desc__slowness::before {
-    position: absolute;
     background-image: url('img/slowness.svg');
     box-shadow: 0px 0px 30px 1px #0043b3;
-    width: 30px;
-    height: 30px;
-    margin-left: -35px;
-    content: "";
 }
 
 .game-desc__ghost::before {
-    position: absolute;
     background-image: url('img/monster_r.gif');
     filter: drop-shadow(0px 0px 30px yellow);
     background-size: cover;
-    width: 30px;
-    height: 30px;
-    margin-left: -35px;
-    content: "";
 }
 
 .game-desc__border::before {
-    position: absolute;
     width: 28px;
     height: 28px;
     border: 2px solid purple;
-    margin-left: -35px;
-    content: "";
 }
 
-/* --- GAME ELEMENTS --- */
+/* --- GAME-ELEMENTS --- */
 
 .gameArea {
     height: 100%;
@@ -102,21 +94,21 @@ html {
     filter: drop-shadow(0px 0px 30px yellow);
 }
 
-.point {
+.point,
+.power-up--slowness {
     position: absolute;
     height: 25px;
     width: 25px;
-    background-image: url(img/point.svg);
     background-size: cover;
+}
+
+.point {
+    background-image: url(img/point.svg);
     box-shadow: 0px 0px 30px 1px #00ff66;
 }
 
 .power-up {
-    position: absolute;
-    height: 25px;
-    width: 25px;
     background-image: url(img/slowness.svg);
-    background-size: cover;
 }
 
 .power-up--slowness {
@@ -144,17 +136,11 @@ html {
     height: 100px;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
     font-weight: 900;
     color: white;
-    border: none;
     text-align: center;
-    background-color: black;
     animation: flash 0.2s ease-in-out 5;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-/* --- GAME-DESCRIPTION --- */
 
 /* --- BUTTON --- */
 
@@ -192,7 +178,7 @@ html {
     }
 }
 
-/* --- CRT EFFECT --- */
+/* --- CRT-EFFECT --- */
 
 .crt-text {
     font-family: 'Press Start 2P', monospace;
