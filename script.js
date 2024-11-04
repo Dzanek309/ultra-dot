@@ -58,7 +58,7 @@ function creatPoint() {
     // POINT
     setTimeout(() => {
         document.querySelector('.score-display').style.fontSize = '500px';
-        document.querySelector('BODY').style.background = 'black';
+        document.querySelector('.gameArea').style.boxShadow = 'none';
     }, "300")
     const point = document.createElement("div");
     point.classList.add("point");
@@ -69,7 +69,7 @@ function creatPoint() {
         pointGainSound();
         points++;
         document.querySelector('.score-display').style.fontSize = '550px';
-        document.querySelector('BODY').style.background = '#090909';
+        document.querySelector('.gameArea').style.boxShadow = "inset 0px 0px 150px 1px rgba(128,0,128,0.5)";
         document.querySelector(".score-display").innerHTML = points;
         creatPoint();
         speed = speed + 0.135;
