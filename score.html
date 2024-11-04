@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">Ultra Dot</h1>
+    </header>
+    <p class="final-score-display crt-text" id=final-score-display" type="number" name="points" readonly></p>
+    <br>
+    <button class="button" onclick="window.open('game.html', '_self')">PLAY</button>
+    <script>
+        let url_string = window.location.href;
+        let url = new URL(url_string);
+        let points = url.searchParams.get("value");
+        document.querySelector(".final-score-display").innerHTML = "YOUR SCORE<br><br>" + "- " + points + " -";
+        console.log(points);
+        var audio = new Audio("sound/game_over.mp3");
+        audio.play();
+    </script>
+</body>
+
+</html>
