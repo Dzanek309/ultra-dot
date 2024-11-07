@@ -14,6 +14,23 @@ html {
     transition: 0.2s;
 }
 
+:root {
+    --ghost_left: url('img/ghost_l.gif');
+    --ghost_right: url('img/ghost_r.gif');
+    --ghost_aura: yellow;
+
+    --point: url('img/point.svg');
+    --point_aura: #00ff66;
+
+    --slowness: url('img/slowness.svg');
+    --slowness_aura: #0043b3;
+
+    --ghost_size: 80px;
+    --point_size: 25px;
+
+    --color_theme: purple;
+}
+
 /* --- GAME TITLE AND RULES --- */
 
 /* .header {
@@ -25,8 +42,8 @@ html {
     margin: 10px;
     font-family: ultradot;
     font-weight: 200;
-    color: purple;
-    text-shadow: 0px 0px 40px purple;
+    color: var(--color_theme);
+    text-shadow: 0px 0px 40px var(--color_theme);
 }
 
 .game-desc {
@@ -49,25 +66,25 @@ html {
 }
 
 .game-desc__points::before {
-    background-image: url('img/point.svg');
-    box-shadow: 0px 0px 30px 1px #00ff66;
+    background-image: var(--point);
+    box-shadow: 0px 0px 30px 1px var(--point_aura);
 }
 
 .game-desc__slowness::before {
-    background-image: url('img/slowness.svg');
-    box-shadow: 0px 0px 30px 1px #0043b3;
+    background-image: var(--slowness);
+    box-shadow: 0px 0px 30px 1px var(--slowness_aura);
 }
 
 .game-desc__ghost::before {
-    background-image: url('img/monster_r.gif');
-    filter: drop-shadow(0px 0px 30px yellow);
+    background-image: var(--ghost_right);
+    filter: drop-shadow(0px 0px 30px var(--ghost_aura));
     background-size: cover;
 }
 
 .game-desc__border::before {
     width: 28px;
     height: 28px;
-    border: 2px solid purple;
+    border: 2px solid var(--color_theme);
 }
 
 /* --- GAME-ELEMENTS --- */
@@ -77,42 +94,41 @@ html {
     width: 100%;
     padding: 0;
     margin: 0;
-    border: 5px solid purple;
-    box-shadow: inset 0px 0px 10px 1px purple;
+    border: 5px solid var(--color_theme);
+    box-shadow: inset 0px 0px 10px 1px var(--color_theme);
     box-sizing: border-box;
     overflow: hidden;
 }
 
-#monster {
+#ghost {
     position: absolute;
     z-index: 999;
     top: 1;
     left: 1;
-    height: 80px;
-    width: 80px;
+    height: var(--ghost_size);
+    width: var(--ghost_size);
     background-size: cover;
-    filter: drop-shadow(0px 0px 30px yellow);
+    filter: drop-shadow(0px 0px 30px var(--ghost_aura));
 }
 
 .point,
 .power-up--slowness {
     position: absolute;
-    height: 25px;
-    width: 25px;
+    height: var(--point_size);
+    width: var(--point_size);
     background-size: cover;
 }
 
 .point {
-    background-image: url(img/point.svg);
-    box-shadow: 0px 0px 30px 1px #00ff66;
+    background-image: var(--point);
+    box-shadow: 0px 0px 30px 1px var(--point_aura);
 }
 
-.power-up {
-    background-image: url(img/slowness.svg);
-}
+/* .power-up {} */
 
 .power-up--slowness {
-    box-shadow: 0px 0px 30px 1px #0043b3;
+    box-shadow: 0px 0px 30px 1px var(--slowness_aura);
+    background-image: var(--slowness);
 }
 
 /* --- SCORE-DISPLAY --- */
@@ -123,7 +139,7 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    color: purple;
+    color: var(--color_theme);
     font-size: 200px;
     font-family: UltraDot;
     opacity: 0.2;
@@ -151,7 +167,7 @@ html {
     outline: none;
     border-radius: 25px;
     border: none;
-    background: purple;
+    background: var(--color_theme);
 }
 
 .button:hover {

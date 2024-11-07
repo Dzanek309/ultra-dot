@@ -11,7 +11,7 @@ function updateDisplay(event) {
     pageY = event.pageY - 20;
 }
 
-//END GAME FUNCTION (touch the monster or out of bounds)
+//END GAME FUNCTION (touch the ghost or out of bounds)
 function forwardPoints() {
     x = document.querySelector('.score-display').innerHTML;
     let link = "score.html?value=" + x;
@@ -22,10 +22,10 @@ function forwardPoints() {
 gameArea.addEventListener("mousemove", updateDisplay, false);
 gameArea.addEventListener("mouseenter", updateDisplay, false);
 
-function monster(x, y) {
-    const monster = document.getElementById("monster");
-    let positionX = parseInt(monster.style.left);
-    let positionY = parseInt(monster.style.top);
+function ghost(x, y) {
+    const ghost = document.getElementById("ghost");
+    let positionX = parseInt(ghost.style.left);
+    let positionY = parseInt(ghost.style.top);
 
     if (isNaN(positionX) == true) {
         positionX = 0;
@@ -35,22 +35,22 @@ function monster(x, y) {
     }
 
     if (positionX < x) {
-        monster.style.left = positionX + speed + 'px';
-        monster.style.backgroundImage = "url('img/monster_r.gif')";
+        ghost.style.left = positionX + speed + 'px';
+        ghost.style.backgroundImage = "var(--ghost_right)";
     } else if (positionX > x) {
-        monster.style.left = positionX - speed + 'px';
-        monster.style.backgroundImage = "url('img/monster_l.gif')";
+        ghost.style.left = positionX - speed + 'px';
+        ghost.style.backgroundImage = "var(--ghost_left)";
     }
     if (positionY < y) {
-        monster.style.top = positionY + speed + 'px';
+        ghost.style.top = positionY + speed + 'px';
     } else if (positionY > y) {
-        monster.style.top = positionY - speed + 'px';
+        ghost.style.top = positionY - speed + 'px';
     }
 }
 
-// MONSTER POSITION UPDATEER
+// ghost POSITION UPDATEER
 window.setInterval(function () {
-    monster(Number(pageX), Number(pageY));
+    ghost(Number(pageX), Number(pageY));
 }, 1);
 
 creatPoint();
@@ -69,7 +69,7 @@ function creatPoint() {
         pointGainSound();
         points++;
         document.querySelector('.score-display').style.fontSize = '550px';
-        document.querySelector('.gameArea').style.boxShadow = "inset 0px 0px 150px 1px rgba(128,0,128,0.5)";
+        document.querySelector('.gameArea').style.boxShadow = "inset 0px 0px 150px 1px color-mix(in srgb, var(--color_theme) 50%, transparent)";
         document.querySelector(".score-display").innerHTML = points;
         creatPoint();
         speed = speed + 0.135;
