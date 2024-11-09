@@ -33,6 +33,7 @@ This where you can change the:
 - img of the elements
 - aura
 - color theme
+- music and sounds
 
 ![App Screenshot](README/screenshot_modding.jpg)
 
