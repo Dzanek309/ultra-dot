@@ -42,11 +42,10 @@ This where you can change the:
 - color theme
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-## Screenshots
+## Rules and Gameplay
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
