@@ -35,6 +35,8 @@ This where you can change the:
 - color theme
 
 ![App Screenshot](README/screenshot_modding.jpg)
+
+![App Screenshot](README/screenshot_audio.jpg)
 ## Rules and Gameplay
 
 ![App Screenshot](README/screenshot_rules.jpg)
