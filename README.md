@@ -14,17 +14,10 @@ Clone the project
 ```bash
   git clone https://github.com/Dzanek309/ultra-dot.git
 ```
-
-Go to the project directory
-
-```bash
-  cd my-project
-```
-
 Install dependencies
 
 ```bash
-  npm install -g serve
+  npm install serve
 ```
 
 Start the server
