@@ -4,7 +4,7 @@
 A minimalist JavaScript game where gameplay revolves around the user's cursor position. Its straightforward design makes it highly customizable.
 
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+![Logo](README/screenshot_title.jpg)
 
 
 ## Run Locally
@@ -41,11 +41,11 @@ This where you can change the:
 - aura
 - color theme
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](README/screenshot_modding.jpg)
 ## Rules and Gameplay
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](README/screenshot_rules.jpg)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](README/screenshot_gameplay.jpg)
 
 
